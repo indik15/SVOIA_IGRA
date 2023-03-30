@@ -11,6 +11,7 @@ namespace SVOIA_IGRA.Model
         public string GetName { get; set; }
         public int GetPlayerID {get;}
 
+
         GetPlayerName(int getplayerid)
         {
             GetPlayerID = getplayerid;
