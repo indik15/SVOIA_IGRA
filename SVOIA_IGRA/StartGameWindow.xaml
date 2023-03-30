@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SVOIA_IGRA.StartGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SVOIA_IGRA"
+        xmlns:vm ="clr-namespace:SVOIA_IGRA.ViewModel"
+        xmlns:cmd ="clr-namespace:SVOIA_IGRA.Commands"
+        mc:Ignorable="d"
+        Height="450" Width="600">
+
+    <UserControl.DataContext>
+        <vm:StartGameWindowViewModel/>
+    </UserControl.DataContext>
+
+    <Grid Background="#3729cf">
+        <ContentControl x:Name="MainContent" />
+        <Grid Height="300" Width="500">
+            <StackPanel>
+                <TextBlock Margin="0 55 0 0"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="22" 
+                           FontWeight="Bold"
+                           FontFamily="Arial Black"
+                           Text="{Binding HText}"
+                           Foreground="Wheat"/>
+
+                <Button x:Name="ButtonJoinToGame"
+                        Click="Button_JoinToGame_Click"
+                        Content="Войти в игру"
+                        Width="150"
+                        Height="30"
+                        Margin="0 45 0 0"                        
+                        Background="Wheat"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        FontFamily="Arial Black"
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Foreground="#61615e"
+                        Command="{Binding Path=SelectNewApplicationComand }"/>
+
+                <Button x:Name="ButtonExitGame" 
+                        Content="Выйти"
+                        Width="150"
+                        Height="30"
+                        Margin="0 25 0 0"
+                        Background="Wheat"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        FontFamily="Arial Black"
+                        BorderBrush="Black"
+                        Foreground="#61615e"
+                        BorderThickness="1"
+                        Command="{Binding Path=CloseStartWindowComand}" Cursor="Hand"/>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
