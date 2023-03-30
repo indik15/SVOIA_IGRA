@@ -11,6 +11,7 @@ namespace ClassLibrary
 
         public int Points { get; }
 
+
         public Player(int id, string name, int points)
         {
             Id = id;
