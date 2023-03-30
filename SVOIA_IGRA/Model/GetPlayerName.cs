@@ -9,6 +9,11 @@ namespace SVOIA_IGRA.Model
     public class GetPlayerName
     {
         public string GetName { get; set; }
-        public int GetPlayerID {get; private set; }
+        public int GetPlayerID {get;}
+
+        GetPlayerName(int getplayerid)
+        {
+            GetPlayerID = getplayerid;
+        }
     }
 }
