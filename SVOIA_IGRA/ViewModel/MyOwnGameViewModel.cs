@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SVOIA_IGRA.ViewModel
 {
-    public class MyOwnGameViewModel : ViewModelBase
+    public partial class MyOwnGameViewModel : ViewModelBase
     {
 
     }
