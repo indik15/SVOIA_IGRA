@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace SVOIA_IGRA.Model
 {
-    public class GetPlayerName
+    public class PlayerName
     {
-        public string GetName { get; set; }
-        public int GetPlayerID {get;}
-
-
-        GetPlayerName(int getplayerid)
+        public string Name { get; set; }
+        public int Id {get;}
+        
+        PlayerName(int id)
         {
-            GetPlayerID = getplayerid;
-        }
+            Id = id;
+        } 
     }
 }
