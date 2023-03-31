@@ -12,12 +12,12 @@ namespace SvoiaIgra.ViewModel
 {
     public partial class MyOwnGameViewModel : ViewModelBase
     {
-        private ObservableCollection<PlayerName> _playerNames;
-        public ObservableCollection<PlayerName> PlayerNames
+        private ObservableCollection<PlayerName> _playerNamesCol;
+        public ObservableCollection<PlayerName> PlayerNamesCol
         {
-            get => _playerNames;
+            get => _playerNamesCol;
 
-            set => _playerNames = value;
+            set => _playerNamesCol = value;
         }
 
         public RelayCommand EnterPlayerNamesCommand { get; set; }
@@ -25,11 +25,13 @@ namespace SvoiaIgra.ViewModel
         private void OnEnterPlayerNamesCommand()
         {
             var playerNames = new ObservableCollection<PlayerName>();
-            мфк 
-            for (int i = 1; i <= UsersCount.UCount; i++)
+            var userCount = new UsersCount();
+            
+            for (int i = 1; i <= userCount.UCount; i++)
             {
-
+                playerNames.Add(new PlayerName(i));
             }
+            PlayerNamesCol = playerNames;
         }
 
 
