@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="SvoiaIgra.SetNameUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SvoiaIgra"
+        xmlns:cmd ="clr-namespace:SvoiaIgra.Commands"
+        xmlns:vm ="clr-namespace:SvoiaIgra.ViewModel"
+        mc:Ignorable="d"
+        Height="260" Width="400" Background="Azure">
+    <UserControl.DataContext>
+        <vm:SetNameUserViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition MinHeight="80"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Background="Yellow" MaxHeight="30" Text="Введите имя игроков:" Grid.Row="0" FontWeight="Bold" FontSize="18" FontFamily="Arial Black" Margin="6 10 0 0"/>
+
+            <StackPanel Background="Aqua" x:Name="ThisStack" MinHeight="80" MaxHeight="400" Width="380" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+
+            <StackPanel Background="Green" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button Width="80" 
+                            Height="30"                            
+                            Margin="10" 
+                            Content="ОК" 
+                            Background="Wheat"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            FontFamily="Arial Black"
+                            BorderBrush="Black"
+                            Foreground="#61615e"
+                            BorderThickness="1"
+                            Cursor="Hand"/>
+
+
+
+                <Button Width="Auto" 
+                            Height="30"             
+                            Margin="10" 
+                            Content="Отмена" 
+                            Background="Wheat"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            FontFamily="Arial Black"
+                            BorderBrush="Black"
+                            Foreground="#61615e"
+                            BorderThickness="1"
+                            Cursor="Hand"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
