@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace SvoiaIgra.ViewModel
+namespace ViewModel
 {
     public abstract partial class ViewModelBase : BaseInpc, IDisposable
     {

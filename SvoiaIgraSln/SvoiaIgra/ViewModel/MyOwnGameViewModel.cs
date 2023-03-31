@@ -1,15 +1,6 @@
-﻿using SvoiaIgra.Commands;
-using SvoiaIgra.Model;
-using System;
-using System.Collections.Generic;
+﻿using SvoiaIgra.Model;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SvoiaIgra.ViewModel;
-using static SvoiaIgra.GameMode.GameMode;
-using static SvoiaIgra.GameMode.MyOwnGameMode;
-using SvoiaIgra.GameMode;
+using ViewModel;
 
 namespace SvoiaIgra.ViewModel
 {

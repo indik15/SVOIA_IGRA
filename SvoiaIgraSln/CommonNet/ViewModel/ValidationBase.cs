@@ -7,7 +7,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace SvoiaIgra.ViewModel
+namespace ViewModel
 {
     public abstract partial class ValidationBase : ViewModelBase, INotifyDataErrorInfo
     {

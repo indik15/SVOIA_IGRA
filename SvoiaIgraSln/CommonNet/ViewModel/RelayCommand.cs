@@ -3,13 +3,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace SvoiaIgra.Commands
+namespace ViewModel
 {
-        #region Делегаты для методов WPF команд
-        public delegate void ExecuteHandler(object parameter);
-        public delegate bool CanExecuteHandler(object parameter);
-        #endregion
-
         #region Класс команд - RelayCommand
         /// <summary>Класс реализующий <see cref="ICommand"/>.<br/>
         /// Реализация взята из <see href="https://www.cyberforum.ru/wpf-silverlight/thread2390714-page4.html#post13535649"/>

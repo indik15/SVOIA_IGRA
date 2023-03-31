@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using ViewModel;
 
 namespace SvoiaIgra.ViewModel
 {
-   internal class SetNameUserViewModel: ViewModelBase
+    internal class SetNameUserViewModel: ViewModelBase
    {
         
    }
