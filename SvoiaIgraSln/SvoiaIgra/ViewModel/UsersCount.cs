@@ -1,5 +1,5 @@
 ﻿using System;
-using ViewModel;
+using ViewModels;
 
 namespace SvoiaIgra.ViewModel
 {

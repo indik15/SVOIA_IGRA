@@ -1,6 +1,6 @@
 ﻿namespace SvoiaIgra.GameMode
 {
-    public partial class MyOwnGameMode
+    public partial class MyOwnGameViewModel
     {
 
     }

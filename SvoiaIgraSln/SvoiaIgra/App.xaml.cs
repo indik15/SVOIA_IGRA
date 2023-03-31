@@ -6,16 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SvoiaIgra
+namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для App.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-        public App()
-        {
-            this.ShutdownMode = ShutdownMode.OnLastWindowClose;
-        }
     }
 }

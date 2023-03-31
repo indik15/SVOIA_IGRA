@@ -1,4 +1,4 @@
-﻿using ViewModel;
+﻿using ViewModels;
 
 namespace SvoiaIgra.ViewModel
 {

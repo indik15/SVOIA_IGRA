@@ -1,171 +1,45 @@
-﻿<UserControl x:Class="SvoiaIgra.MainWindow"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:SvoiaIgra.ViewModel"
-             mc:Ignorable="d"
-             Height="1080" Width="1920" Background="Azure">
-    <UserControl.DataContext>
-        <vm:MainWindowViewModel/>
-    </UserControl.DataContext>
-
-    <Grid>
-
-        <Grid Height="280" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-            <StackPanel x:Name="PlayerTable" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 10 10">
-                
-                <StackPanel Width="120" Height="170" Background="BlanchedAlmond">
-                    <TextBlock Background="WhiteSmoke" Width="80" Height="30" Margin="30"/>
-                    <TextBlock Background="WhiteSmoke" Width="80" Height="30"/>
-                </StackPanel>
-                
-            </StackPanel>
-        </Grid>
-
-        <Grid Margin="0,0,1360,280" Background="#FF02026F">
-            <Grid Width="350" Height="200" Margin="0 80 0 0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFC0BFCD">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                
-                <Grid Grid.Column="0" Grid.Row="0" Background="Yellow">
-                    <TextBlock Text="С" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                </Grid>
-                <TextBlock Text="В"  Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="О"  Grid.Column="2" Grid.Row="0" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="Я"  Grid.Column="3" Grid.Row="0" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="И"  Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="Г"  Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="Р"  Grid.Column="2" Grid.Row="1" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <TextBlock Text="А"  Grid.Column="3" Grid.Row="1" FontWeight="Bold" FontSize="82" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Global User Interface"/>
-                <!--#region Полний бред 2-->
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="0" Grid.Row="0"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="1" Grid.Row="0"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="2" Grid.Row="0"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="3" Grid.Row="0"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="0" Grid.Row="1"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="1" Grid.Row="1"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="2" Grid.Row="1"/>
-                <Border BorderBrush="White" BorderThickness="2" Grid.Column="3" Grid.Row="1"/>
-                <!--#endregion-->
-            </Grid>
-
-            <Grid Width="400" Height="400" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 60">
-                <StackPanel>
-                    <Button Content="Добавить очки"
-                            Width="250"
-                            Height="30"
-                            Margin="0 25 0 0"
-                            Background="Wheat"
-                            FontSize="14"
-                            FontWeight="Bold"
-                            FontFamily="Arial Black"
-                            BorderBrush="Black"
-                            Foreground="#61615e"
-                            BorderThickness="1"
-                            Cursor="Hand"/>
-
-                    <Button Content="Отнять очки"
-                            Width="250"
-                            Height="30"
-                            Margin="0 25 0 0"
-                            Background="Wheat"
-                            FontSize="14"
-                            FontWeight="Bold"
-                            FontFamily="Arial Black"
-                            BorderBrush="Black"
-                            Foreground="#61615e"
-                            BorderThickness="1"
-                            Cursor="Hand"/>
-
-                    <Button Content="Выйти"
-                            Width="250"
-                            Height="30"
-                            Margin="0 25 0 0"
-                            Background="Wheat"
-                            FontSize="14"
-                            FontWeight="Bold"
-                            FontFamily="Arial Black"
-                            BorderBrush="Black"
-                            Foreground="#61615e"
-                            BorderThickness="1"
-                            Cursor="Hand"
-                            Command="{Binding Path=CloseMainWindowCommand}"/>
-
-                </StackPanel>
-            </Grid>
-            
-        </Grid>
-
-        <Grid Margin="555,0,0,280" ShowGridLines="False">
-            <Grid.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF02026F" Offset="1"/>
-                    <GradientStop Color="#FF2B00FF" Offset="0"/>
-                </RadialGradientBrush>
-            </Grid.Background>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="450"/>
-                <ColumnDefinition />
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>            
-            </Grid.ColumnDefinitions>
-
-            <!--#region Полный бред -->
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="5" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="6" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="7" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="8" Grid.RowSpan="12"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="1"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="2"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="3"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="4"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="5"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="6"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="7"/>
-            <Border BorderBrush="White" BorderThickness="2" Grid.ColumnSpan="12" Grid.RowSpan="8"/>
-            <!--#endregion-->
-
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Марка машины" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Страны" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma"/>
-
-            <Button Grid.Row="0" Grid.Column="1" Content="100" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="0" Grid.Column="2" Content="200" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="0" Grid.Column="3" Content="300" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="0" Grid.Column="4" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="0" Grid.Column="5" Content="500" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-
-            <Button Grid.Row="1" Grid.Column="1" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="1" Grid.Column="2" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="1" Grid.Column="3" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="1" Grid.Column="4" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-            <Button Grid.Row="1" Grid.Column="5" Content="400" FontWeight="Bold" FontSize="36" Foreground="AntiqueWhite" FontFamily="Tahoma" Background="Transparent" Height="90" Cursor="Hand"/>
-
-        </Grid>
-    </Grid>
-</UserControl>
+﻿<Window x:Class="SvoiaIgra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SvoiaIgra"
+        xmlns:vm="clr-namespace:SvoiaIgra.GameMode"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{DynamicResource mainVM}"
+        Content="{Binding}">
+    <Window.Style>
+        <Style TargetType="Window">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Mode}"  Value="Welcome">
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate DataType="{x:Type vm:MyOwnGameViewModel}">
+                                <local:WelcomeUC/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Mode}"  Value="PlayerNameInput">
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate DataType="{x:Type vm:MyOwnGameViewModel}">
+                                <local:ChooseUsersUC/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Mode}"  Value="Close">
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate DataType="{x:Type vm:MyOwnGameViewModel}">
+                                <local:ExitUC/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Style>
+</Window>

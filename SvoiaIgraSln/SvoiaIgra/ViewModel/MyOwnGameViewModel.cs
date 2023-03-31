@@ -1,6 +1,6 @@
 ﻿using SvoiaIgra.Model;
 using System.Collections.ObjectModel;
-using ViewModel;
+using ViewModels;
 
 namespace SvoiaIgra.ViewModel
 {
