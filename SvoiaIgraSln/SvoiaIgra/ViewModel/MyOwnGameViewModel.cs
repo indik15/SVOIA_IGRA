@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SvoiaIgra.ViewModel;
+using static SvoiaIgra.GameMode.GameMode;
+using static SvoiaIgra.GameMode.MyOwnGameMode;
+using SvoiaIgra.GameMode;
 
 namespace SvoiaIgra.ViewModel
 {
@@ -32,6 +35,7 @@ namespace SvoiaIgra.ViewModel
                 playerNames.Add(new PlayerName(i));
             }
             PlayerNamesCol = playerNames;
+            //Mode = ModeEnum.PlayerNameInput;
         }
 
 
