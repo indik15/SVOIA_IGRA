@@ -11,7 +11,7 @@ namespace SvoiaIgra.Model
         public string Name { get; set; }
         public int Id {get;}
         
-        PlayerName(int id)
+        public PlayerName(int id)
         {
             Id = id;
         } 
