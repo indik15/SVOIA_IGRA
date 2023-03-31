@@ -11,6 +11,7 @@ namespace SvoiaIgra.GameMode
         public enum ModeEnum
         {
             Welcome,
+            PlayerNameInput,
             Start,
             Close,
             Game
