@@ -15,7 +15,7 @@ namespace ClassLibrary
         /// <summary>Статус игры.</summary>
         GameStatus Status { get; }
 
-        /// <summary>ИД теущего игрока.</summary>
+        /// <summary>ИД теущего игрока. </summary>
         int CurrentPlayerId { get; }
 
         /// <summary>Изменился игрок.</summary>
