@@ -1,27 +1,25 @@
-﻿using SvoiaIgra.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using SvoiaIgra.GameMode;
+﻿using ViewModels;
 using static SvoiaIgra.GameMode.GameMode;
 
 namespace SvoiaIgra.GameMode
 {
-    public partial class MyOwnGameMode
+    public partial class MyOwnGameViewModel
     {
-        public RelayCommand StartCommand => new RelayCommand(Start);
-        public RelayCommand CloseCommand => new RelayCommand(Close);
+        public RelayCommand StartCommand => GetCommand(Start);
+        public RelayCommand CloseCommand => GetCommand(Close);
+        public RelayCommand WelcomeCommand => GetCommand(Welcome);
 
         private void Start()
         {
-            Mode = ModeEnum.Start;
+            Mode = ModeEnum.PlayerNameInput;
         }
         private void Close()
         {
             Mode = ModeEnum.Close;
+        }
+        private void Welcome()
+        {
+            Mode = ModeEnum.Welcome;
         }
     }
 }

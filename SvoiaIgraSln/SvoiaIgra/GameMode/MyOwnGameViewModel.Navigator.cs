@@ -1,24 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ViewModels;
 using static SvoiaIgra.GameMode.GameMode;
 
 namespace SvoiaIgra.GameMode
 {
-    public partial class MyOwnGameMode
+    public partial class MyOwnGameViewModel : ViewModelBase
     {
-        private ModeEnum mode;
-
         public ModeEnum Mode
         {
-            get => mode;
+            get => Get<ModeEnum>();
 
-            private set
-            {
-                mode= value;
-            }
+            private set => Set(value);
         }
     }
 }

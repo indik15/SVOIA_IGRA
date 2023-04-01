@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System;
-using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace SvoiaIgra.ViewModel
+namespace ViewModels
 {
-    public abstract partial class ViewModelBase : BaseInpc, IDisposable
+    public  abstract partial class ViewModelBase : BaseInpc
     {
         private readonly Dictionary<string, object?> _properties = new();
 
@@ -37,7 +36,5 @@ namespace SvoiaIgra.ViewModel
             _properties[propertyName] = newValue;
             Set(ref oldValue, newValue, propertyName);
         }
-
-        public virtual void Dispose() { }
     }
 }

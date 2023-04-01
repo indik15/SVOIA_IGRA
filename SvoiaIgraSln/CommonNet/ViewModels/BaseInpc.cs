@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace SvoiaIgra.ViewModel
+namespace ViewModels
 {
     public abstract class BaseInpc : INotifyPropertyChanged
     {
@@ -11,7 +11,7 @@ namespace SvoiaIgra.ViewModel
 
         protected void Set<T>(ref T? storage, T? newValue, [CallerMemberName] string propertyName = "")
         {
-            if (Equals(storage, newValue)) // В WPF для сравнения используется метод object.Equals(object).
+            if (!Equals(storage, newValue)) // В WPF для сравнения используется метод object.Equals(object).
             {
                 T? oldValue = storage;
                 storage = newValue;
