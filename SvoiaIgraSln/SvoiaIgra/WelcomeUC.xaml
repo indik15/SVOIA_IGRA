@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SvoiaIgra.ViewModel"
              mc:Ignorable="d"
-        Height="450" Width="600">
+        Height="Auto" Width="Auto">
 
     <d:UserControl.DataContext>
         <vm:MyOwnGameViewModel/>
@@ -36,7 +36,7 @@
                         BorderBrush="Black"
                         BorderThickness="1"
                         Foreground="#61615e"
-                        Command="{Binding StartCommand}"/>
+                        Command="{Binding StartCommand}" Cursor="Hand"/>
 
                 <Button x:Name="ButtonExitGame" 
                         Content="Выйти"

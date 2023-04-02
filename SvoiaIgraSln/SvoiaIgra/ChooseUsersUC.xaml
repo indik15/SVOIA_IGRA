@@ -5,14 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SvoiaIgra.ViewModel"
              mc:Ignorable="d"
-        Height="160" Width="400" Background="AliceBlue">
+        Height="450" Width="800" Background="#3729cf">
     
     <d:UserControl.DataContext>
         <vm:MyOwnGameViewModel/>
     </d:UserControl.DataContext>
 
     <Grid>
-        <Grid>
+        <Grid Height="160" Width="400" Background="AliceBlue">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -51,7 +51,8 @@
                             BorderBrush="Black"
                             Foreground="#61615e"
                             BorderThickness="1"
-                            Cursor="Hand"/>
+                            Cursor="Hand"
+                        Command="{Binding WelcomeCommand}"/>
             </StackPanel>
         </Grid>
     </Grid>

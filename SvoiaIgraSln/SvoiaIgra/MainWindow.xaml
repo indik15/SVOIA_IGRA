@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:SvoiaIgra"
         xmlns:vm="clr-namespace:SvoiaIgra.GameMode"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="800" 
         DataContext="{DynamicResource mainVM}"
-        Content="{Binding}">
+        Content="{Binding}" WindowStartupLocation="CenterScreen">
     <Window.Style>
         <Style TargetType="Window">
             <Style.Triggers>
+                
                 <DataTrigger Binding="{Binding Mode}"  Value="Welcome">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
@@ -21,6 +22,7 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
+                
                 <DataTrigger Binding="{Binding Mode}"  Value="PlayerNameInput">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
@@ -30,6 +32,7 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
+                
                 <DataTrigger Binding="{Binding Mode}"  Value="Close">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
@@ -39,6 +42,7 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
+                
             </Style.Triggers>
         </Style>
     </Window.Style>
