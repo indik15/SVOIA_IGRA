@@ -21,7 +21,7 @@
                            FontSize="22" 
                            FontWeight="Bold"
                            FontFamily="Arial Black"
-                           Text="{Binding HText}"
+                           Text="Добро Пожаловать!"
                            Foreground="Wheat"/>
 
                 <Button x:Name="ButtonJoinToGame"
