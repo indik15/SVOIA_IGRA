@@ -8,21 +8,16 @@ namespace SvoiaIgra.GameMode
 {
     public partial class MyOwnGameViewModel
     {
+        public RelayCommand CreaTeGameCommand => GetCommand(StartGame);
 
-        public RelayCommand<int> CreaTeGameCommand => GetCommand();
-
-        private void StartGame(int count)
-        {
-
-        }
-        private bool CanStartGame(int count)
+        private void StartGame()
         {
             UsersCount usersCount = new UsersCount();
-            usersCount.UCount= count;
-            if(usersCount.HasErrors == true)
+            if (!usersCount.HashError)
             {
-                return false;
+                Mode = ModeEnum.PlayerNameInput;
             }
         }
+
     }
 }

@@ -22,8 +22,8 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
-                
-                <DataTrigger Binding="{Binding Mode}"  Value="PlayerNameInput">
+
+                <DataTrigger Binding="{Binding Mode}"  Value="PlayerCountInput">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
                             <DataTemplate DataType="{x:Type vm:MyOwnGameViewModel}">
