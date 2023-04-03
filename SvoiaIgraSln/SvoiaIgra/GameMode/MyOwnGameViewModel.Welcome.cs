@@ -11,7 +11,7 @@ namespace SvoiaIgra.GameMode
 
         private void Start()
         {
-            Mode = ModeEnum.PlayerNameInput;
+            Mode = ModeEnum.PlayerCountInput;
         }
         private void Close()
         {

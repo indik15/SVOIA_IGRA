@@ -5,6 +5,7 @@
         public enum ModeEnum
         {
             Welcome,
+            PlayerCountInput,
             PlayerNameInput,
             Start,
             Close,
