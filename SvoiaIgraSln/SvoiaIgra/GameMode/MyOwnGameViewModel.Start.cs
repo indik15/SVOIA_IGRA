@@ -8,7 +8,7 @@ namespace SvoiaIgra.GameMode
 {
     public partial class MyOwnGameViewModel
     {
-        public RelayCommand CreaTeGameCommand => GetCommand(StartGame);
+        public RelayCommand CreateGameCommand => GetCommand(StartGame);
 
         private void StartGame()
         {

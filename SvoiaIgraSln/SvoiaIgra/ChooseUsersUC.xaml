@@ -35,8 +35,7 @@
                             Foreground="#61615e"
                             BorderThickness="1"
                             Cursor="Hand"
-                            Command="{Binding Path=CreateUsersCommand}"
-                        CommandParameter="{Binding Text, ElementName=Cuser}"/>
+                            Command="{Binding CreateGameCommand}"/>
 
 
 
