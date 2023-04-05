@@ -14,7 +14,7 @@ namespace SvoiaIgra.ViewModel
             set
             {
                 _Ucount = value;
-                HashError = value < 2 && value > 8;
+                HashError = value < 2 || value > 8;
                 if (HashError)
                     throw new ArgumentOutOfRangeException(nameof(UCount));
             }

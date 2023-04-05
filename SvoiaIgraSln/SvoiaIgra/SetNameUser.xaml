@@ -6,9 +6,9 @@
              xmlns:vm="clr-namespace:SvoiaIgra.ViewModel"
              mc:Ignorable="d"
         Height="260" Width="400" Background="Azure">
-    <UserControl.DataContext>
-        <vm:SetNameUserViewModel/>
-    </UserControl.DataContext>
+    <d:UserControl.DataContext>
+        <vm:MyOwnGameViewModel/>
+    </d:UserControl.DataContext>
     <Grid>
         <Grid>
             <Grid.RowDefinitions>

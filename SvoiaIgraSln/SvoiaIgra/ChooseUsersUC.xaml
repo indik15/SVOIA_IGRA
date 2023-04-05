@@ -20,7 +20,8 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="Введите число игроков:" Grid.Row="0" FontWeight="Bold" FontSize="18" FontFamily="Arial Black" Margin="6 20 0 0"/>
-            <TextBox x:Name="Cuser" Height="30" Width="388" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="6 0 6 0" AutoWordSelection="True"/>
+            <TextBox Grid.Row="1" x:Name="Cuser" Height="30" Width="388"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="6 0 6 0" AutoWordSelection="True"/>
+      
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Width="80" 
@@ -35,7 +36,8 @@
                             Foreground="#61615e"
                             BorderThickness="1"
                             Cursor="Hand"
-                            Command="{Binding CreateGameCommand}"/>
+                            Command="{Binding CreateGameCommand}"
+                        CommandParameter="{Binding Text, ElementName=Cuser}"/>
 
 
 

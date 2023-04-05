@@ -10,9 +10,11 @@ namespace SvoiaIgra.GameMode
     {
         public RelayCommand CreateGameCommand => GetCommand(StartGame);
 
-        private void StartGame()
+        private void StartGame(object p)
         {
             UsersCount usersCount = new UsersCount();
+            usersCount.UCount = Convert.ToInt32(p);
+
             if (!usersCount.HashError)
             {
                 Mode = ModeEnum.PlayerNameInput;
