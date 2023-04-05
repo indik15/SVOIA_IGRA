@@ -9,6 +9,7 @@ namespace SvoiaIgra.GameMode
     public partial class MyOwnGameViewModel
     {
         public RelayCommand CreateGameCommand => GetCommand(StartGame);
+        public RelayCommand BackToChooseUsersCommand => GetCommand(BackToChooseUsers);
 
         private void StartGame(object p)
         {
@@ -19,6 +20,11 @@ namespace SvoiaIgra.GameMode
             {
                 Mode = ModeEnum.PlayerNameInput;
             }
+        }
+
+        private void BackToChooseUsers()
+        {
+            Mode = ModeEnum.PlayerCountInput;
         }
 
     }

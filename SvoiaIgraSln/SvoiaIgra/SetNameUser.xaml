@@ -48,7 +48,8 @@
                             BorderBrush="Black"
                             Foreground="#61615e"
                             BorderThickness="1"
-                            Cursor="Hand"/>
+                            Cursor="Hand"
+                        Command="{Binding BackToChooseUsersCommand}"/>
             </StackPanel>
         </Grid>
     </Grid>
