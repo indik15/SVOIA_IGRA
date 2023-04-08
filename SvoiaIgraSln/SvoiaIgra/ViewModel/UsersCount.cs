@@ -5,20 +5,23 @@ namespace SvoiaIgra.ViewModel
 {
     public class UsersCount : ValidationBase
     {
-        private int _Ucount;
+        public int Count { get => Get<T>(); set => Set(value); }
 
-        public int UCount
+        protected override void OnPropertyChanged(string propertyName, object? oldValue, object? newValue)
         {
-            get => _Ucount;
-
-            set
+            base.OnPropertyChanged(propertyName, oldValue, newValue);
+            if (propertyName == nameof(Count))
             {
-                _Ucount = value;
-                HashError = value < 2 || value > 8;
-                if (HashError)
-                    throw new ArgumentOutOfRangeException(nameof(UCount));
+                int value = (int)newValue!;
+                if (value < 2 || value > 8)
+                {
+                    AddError("Количество игроков должно быть от 2 до 8", propertyName);
+                }
+                else
+                {
+                    ClearErrors(propertyName);
+                }
             }
         }
-        public bool HashError { get; private set; } = true;
     }
 }
