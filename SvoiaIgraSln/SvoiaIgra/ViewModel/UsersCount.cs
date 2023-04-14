@@ -1,16 +1,17 @@
 ﻿using System;
+using System.ComponentModel;
 using ViewModels;
 
 namespace SvoiaIgra.ViewModel
 {
     public class UsersCount : ValidationBase
     {
-        public int Count { get => Get<T>(); set => Set(value); }
+        public int UCount { get => Get<int>(); set => Set(value); }
 
         protected override void OnPropertyChanged(string propertyName, object? oldValue, object? newValue)
         {
             base.OnPropertyChanged(propertyName, oldValue, newValue);
-            if (propertyName == nameof(Count))
+            if (propertyName == nameof(UCount))
             {
                 int value = (int)newValue!;
                 if (value < 2 || value > 8)

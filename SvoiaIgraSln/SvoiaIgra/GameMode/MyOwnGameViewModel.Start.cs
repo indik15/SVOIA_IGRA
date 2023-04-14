@@ -16,7 +16,7 @@ namespace SvoiaIgra.GameMode
             UsersCount usersCount = new UsersCount();
             usersCount.UCount = Convert.ToInt32(p);
 
-            if (!usersCount.HashError)
+            if (!usersCount.HasErrors)
             {
                 Mode = ModeEnum.PlayerNameInput;
             }
