@@ -1,6 +1,8 @@
 ﻿using SvoiaIgra.Model;
 using System.Collections.ObjectModel;
 using System.Security.Cryptography.X509Certificates;
+using static SvoiaIgra.GameMode.GameMode;
+
 using ViewModels;
 
 namespace SvoiaIgra.ViewModel
